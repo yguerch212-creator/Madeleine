@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guide Complet DreamBox - Tout ce qu'il faut faire</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Poppins', sans-serif; color: #2C2F2F; line-height: 1.8; padding: 50px; max-width: 900px; margin: 0 auto; font-size: 15px; }
+  h1 { font-size: 28px; font-weight: 700; color: #010ED8; margin-bottom: 5px; }
+  h2 { font-size: 22px; font-weight: 600; color: #010ED8; margin-top: 40px; margin-bottom: 15px; border-bottom: 3px solid #D0DDF2; padding-bottom: 8px; }
+  h3 { font-size: 17px; font-weight: 600; margin-top: 20px; margin-bottom: 8px; color: #2C2F2F; }
+  p { margin-bottom: 10px; }
+  ol, ul { margin-left: 25px; margin-bottom: 15px; }
+  li { margin-bottom: 8px; }
+  .header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 3px solid #010ED8; }
+  .subtitle { color: #666; font-size: 15px; }
+  .step { background: #F4F2DC; border-left: 5px solid #010ED8; padding: 18px 22px; margin: 18px 0; border-radius: 0 12px 12px 0; }
+  .step h3 { margin-top: 0; color: #010ED8; }
+  .warning { background: #FFF3CD; border-left: 5px solid #FFC107; padding: 18px 22px; margin: 18px 0; border-radius: 0 12px 12px 0; }
+  .success { background: #D4EDDA; border-left: 5px solid #28A745; padding: 18px 22px; margin: 18px 0; border-radius: 0 12px 12px 0; }
+  .info { background: #D0DDF2; border-left: 5px solid #010ED8; padding: 18px 22px; margin: 18px 0; border-radius: 0 12px 12px 0; }
+  code { background: #f0f0f0; padding: 3px 8px; border-radius: 4px; font-size: 14px; color: #010ED8; }
+  strong { color: #010ED8; }
+  .emoji { font-size: 20px; }
+  .checklist { list-style: none; margin-left: 0; }
+  .checklist li { padding: 8px 0; border-bottom: 1px solid #eee; }
+  .checklist li:before { content: "☐ "; font-size: 18px; }
+  .page-break { page-break-before: always; }
+  .toc { background: #f9f9f9; padding: 25px 30px; border-radius: 12px; margin-bottom: 30px; }
+  .toc ul { list-style: none; margin-left: 0; }
+  .toc li { margin-bottom: 6px; font-size: 14px; }
+  .num { display: inline-block; background: #010ED8; color: white; width: 28px; height: 28px; text-align: center; line-height: 28px; border-radius: 50%; font-size: 14px; font-weight: 600; margin-right: 8px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📖 Guide Complet DreamBox</h1>
+  <p class="subtitle">Tout ce qu'il faut faire, étape par étape, même si t'as jamais touché WordPress</p>
+  <p style="color:#999; font-size:13px; margin-top:8px;">Groupe 2 (Madeleine) — EFREI B2CDI 2025/2026</p>
+</div>
+
+<div class="toc">
+  <h3>📋 Ce guide couvre :</h3>
+  <ul>
+    <li><strong>Partie 1</strong> — C'est quoi les fichiers dans le dossier ? (explication simple)</li>
+    <li><strong>Partie 2</strong> — Comment importer les pages dans WordPress</li>
+    <li><strong>Partie 3</strong> — Les trucs à faire sur WordPress pour le rendu final</li>
+    <li><strong>Partie 4</strong> — Checklist avant de rendre le projet</li>
+  </ul>
+</div>
+
+<!-- ============================================ -->
+<h2>Partie 1 — C'est quoi les fichiers ?</h2>
+<!-- ============================================ -->
+
+<div class="info">
+  <strong>En résumé :</strong> Le dossier contient des pages toutes faites que vous pouvez importer dans WordPress en 2 clics. Pas besoin de coder, pas besoin de CSS, tout se fait dans Elementor.
+</div>
+
+<h3>📁 Les fichiers du dossier</h3>
+
+<div class="step">
+  <h3>elementor-templates/page-experience.json</h3>
+  <p>C'est la <strong>page "L'Expérience"</strong> toute faite. Elle contient :</p>
+  <ul>
+    <li>Un grand titre en haut</li>
+    <li>6 avis de clients (avec des étoiles et des citations)</li>
+    <li>3 blocs de réassurance sur la qualité du sommeil</li>
+    <li>Une FAQ avec 8 questions/réponses (qui s'ouvrent en cliquant dessus)</li>
+    <li>Un bouton "Découvrir nos machines" en bas</li>
+  </ul>
+  <p>👉 C'est un fichier <strong>.json</strong> = un format que Elementor sait lire et transformer en page automatiquement.</p>
+</div>
+
+<div class="step">
+  <h3>elementor-templates/page-politique-confidentialite.json</h3>
+  <p>C'est la <strong>page "Politique de Confidentialité"</strong> toute faite. Le truc légal qu'on doit mettre dans le footer.</p>
+  <p>Elle contient tout ce qu'il faut : collecte de données, RGPD, cookies, droits des utilisateurs, etc.</p>
+  <p>👉 Même principe : fichier .json importable dans Elementor.</p>
+</div>
+
+<div class="step">
+  <h3>cahier-des-charges.pdf</h3>
+  <p>C'est le <strong>cahier des charges du projet</strong> (demandé dans les consignes, ça vaut 1 point). Il explique :</p>
+  <ul>
+    <li>C'est quoi DreamBox, la mission, les valeurs</li>
+    <li>Le public visé</li>
+    <li>Les objectifs du site</li>
+    <li>La structure des pages</li>
+    <li>La charte graphique (couleurs, typo, style)</li>
+    <li>Les contraintes techniques</li>
+  </ul>
+  <p>👉 C'est un PDF, vous avez juste à le mettre dans le dossier de rendu.</p>
+</div>
+
+<div class="step">
+  <h3>Ce guide (guide-complet-dreambox.pdf)</h3>
+  <p>Bah… c'est ce que vous êtes en train de lire 😄</p>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ============================================ -->
+<h2>Partie 2 — Comment importer les pages</h2>
+<!-- ============================================ -->
+
+<div class="warning">
+  <strong>⚠️ Pas de panique :</strong> L'import ne touche PAS aux pages qui existent déjà. On va d'abord créer des pages de test pour voir le résultat, et remplacer seulement quand on est contente.
+</div>
+
+<h3><span class="num">1</span> Se connecter à WordPress</h3>
+<div class="step">
+  <ol>
+    <li>Ouvrir un navigateur et aller sur : <code>groupe2.stevenberg.fr/wp-admin</code></li>
+    <li>Se connecter avec vos identifiants</li>
+  </ol>
+</div>
+
+<h3><span class="num">2</span> Importer les templates dans la bibliothèque</h3>
+<div class="step">
+  <ol>
+    <li>Dans le menu à gauche, cliquer sur <strong>« Templates »</strong> puis <strong>« Mes templates »</strong>
+      <br><em>(Si vous voyez "Elementor" dans le menu, c'est là-dedans aussi)</em></li>
+    <li>En haut de la page, cliquer sur le bouton <strong>« Importer des templates »</strong>
+      <br><em>(C'est une petite icône de flèche vers le haut ↑)</em></li>
+    <li>Cliquer sur <strong>« Choisir un fichier »</strong></li>
+    <li>Aller chercher le fichier <code>page-experience.json</code></li>
+    <li>Cliquer sur <strong>« Importer maintenant »</strong></li>
+    <li><strong>Recommencer</strong> la même chose pour <code>page-politique-confidentialite.json</code></li>
+  </ol>
+</div>
+
+<div class="success">
+  <strong>✅ C'est fait !</strong> Les deux templates sont maintenant dans votre bibliothèque. Rien n'a changé sur le site, c'est juste stocké dans Elementor.
+</div>
+
+<h3><span class="num">3</span> Créer une page de test pour voir le résultat</h3>
+<div class="step">
+  <ol>
+    <li>Aller dans <strong>Pages → Ajouter</strong></li>
+    <li>Mettre comme titre : <strong>[TEST] L'Expérience</strong></li>
+    <li>Cliquer sur <strong>« Modifier avec Elementor »</strong> (le gros bouton bleu)</li>
+    <li>Une fois dans Elementor, cliquer sur l'<strong>icône dossier 📁</strong> au milieu de la page blanche</li>
+    <li>Aller dans l'onglet <strong>« Mes templates »</strong></li>
+    <li>Trouver <strong>« L'Expérience »</strong> dans la liste</li>
+    <li>Cliquer sur <strong>« Insérer »</strong></li>
+    <li>Si un popup demande "Voulez-vous importer les paramètres du document ?" → cliquer <strong>« Oui »</strong></li>
+    <li>La page apparaît ! 🎉</li>
+    <li>Cliquer sur <strong>« Sauvegarder en brouillon »</strong> (en bas à gauche, la petite flèche à côté de Publier)</li>
+  </ol>
+  <p><strong>Faire pareil</strong> pour la politique de confidentialité : créer une page <strong>[TEST] Politique de Confidentialité</strong>, insérer le template.</p>
+</div>
+
+<h3><span class="num">4</span> Comparer et remplacer</h3>
+<div class="step">
+  <ol>
+    <li>Dans la liste des pages (<strong>Pages → Toutes les pages</strong>), survoler la page [TEST] et cliquer <strong>« Aperçu »</strong></li>
+    <li>Ouvrir la page existante dans un autre onglet pour comparer</li>
+    <li>Si c'est bon 👍 :</li>
+  </ol>
+  <p><strong>Pour remplacer :</strong></p>
+  <ol>
+    <li>Mettre l'ancienne page à la <strong>corbeille</strong></li>
+    <li>Enlever "[TEST]" du titre de la nouvelle page</li>
+    <li>Vérifier que l'URL (le "slug") est correct :
+      <br>→ <code>experience</code> pour la page Expérience
+      <br>→ <code>politique-de-confidentialite</code> pour la politique</li>
+    <li>Cliquer <strong>« Publier »</strong></li>
+  </ol>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ============================================ -->
+<h2>Partie 3 — Les trucs à faire sur WordPress</h2>
+<!-- ============================================ -->
+
+<p>Ces trucs-là sont demandés dans les consignes du prof et il faut les faire directement dans WordPress :</p>
+
+<h3>🔗 Lier la Politique de Confidentialité dans le footer</h3>
+<div class="step">
+  <p>Quand quelqu'un clique sur "Politique de Confidentialité" dans le footer, ça doit mener vers la page.</p>
+  <ol>
+    <li>Ouvrir le footer avec Elementor (si c'est un template Elementor)
+      <br><em>Ou bien : Apparence → Menus</em></li>
+    <li>Ajouter un lien vers la page <strong>Politique de Confidentialité</strong></li>
+    <li>Sauvegarder</li>
+  </ol>
+</div>
+
+<h3>🔍 Configurer le SEO (Yoast SEO)</h3>
+<div class="step">
+  <p>Si le plugin <strong>Yoast SEO</strong> est installé, pour chaque page :</p>
+  <ol>
+    <li>Ouvrir la page dans l'éditeur WordPress (pas Elementor)</li>
+    <li>Descendre en bas, y'a un bloc <strong>Yoast SEO</strong></li>
+    <li>Remplir le <strong>Titre SEO</strong> et la <strong>Meta description</strong></li>
+  </ol>
+  <p><strong>Pour la page Expérience :</strong></p>
+  <ul>
+    <li>Titre : <code>L'Expérience DreamBox — FAQ, Témoignages & Qualité du Sommeil</code></li>
+    <li>Description : <code>Découvrez les témoignages de nos rêveurs, notre FAQ complète et nos garanties sur la qualité de votre sommeil avec DreamBox.</code></li>
+  </ul>
+  <p><strong>Pour la Politique de Confidentialité :</strong></p>
+  <ul>
+    <li>Titre : <code>Politique de Confidentialité — DreamBox</code></li>
+    <li>Description : <code>Consultez la politique de confidentialité de DreamBox. Protection de vos données personnelles conformément au RGPD.</code></li>
+  </ul>
+  <p>⚠️ Si Yoast n'est pas installé : <strong>Extensions → Ajouter</strong>, chercher "Yoast SEO", installer, activer.</p>
+</div>
+
+<h3>🍪 Installer le bandeau cookies</h3>
+<div class="step">
+  <ol>
+    <li>Aller dans <strong>Extensions → Ajouter</strong></li>
+    <li>Chercher <strong>« CookieYes »</strong> ou <strong>« Complianz »</strong> (les deux sont gratuits)</li>
+    <li>Installer et activer</li>
+    <li>Suivre l'assistant de configuration (c'est guidé)</li>
+    <li>Le bandeau apparaîtra automatiquement sur toutes les pages</li>
+  </ol>
+</div>
+
+<h3>⭐ Favicon (la petite icône dans l'onglet du navigateur)</h3>
+<div class="step">
+  <ol>
+    <li>Aller dans <strong>Apparence → Personnaliser → Identité du site</strong></li>
+    <li>Tout en bas : <strong>« Icône du site »</strong></li>
+    <li>Mettre une image carrée (512x512 px idéalement) — un petit logo DreamBox ou un croissant de lune</li>
+    <li>Publier</li>
+  </ol>
+</div>
+
+<h3>👤 Vérifier le compte admin du prof</h3>
+<div class="step">
+  <p>Le prof doit pouvoir se connecter avec ces identifiants :</p>
+  <ul>
+    <li>Email : <code>formation@stevenberg.fr</code></li>
+    <li>Identifiant : <code>steven</code></li>
+    <li>Mot de passe : <code>00099</code></li>
+  </ul>
+  <p>Pour vérifier : <strong>Utilisateurs → Tous les utilisateurs</strong>. Si "steven" n'existe pas :</p>
+  <ol>
+    <li><strong>Utilisateurs → Ajouter</strong></li>
+    <li>Remplir avec les infos ci-dessus</li>
+    <li>Rôle : <strong>Administrateur</strong></li>
+    <li>Cliquer <strong>« Ajouter un utilisateur »</strong></li>
+  </ol>
+</div>
+
+<h3>🖼️ Vérifier les attributs alt des images</h3>
+<div class="step">
+  <p>Toutes les images du site doivent avoir un texte alternatif (c'est pour le SEO et l'accessibilité).</p>
+  <ol>
+    <li>Aller dans <strong>Médias → Bibliothèque</strong></li>
+    <li>Cliquer sur chaque image</li>
+    <li>Remplir le champ <strong>« Texte alternatif »</strong> avec une courte description
+      <br><em>Exemple : "Boîte à rêves DreamBox sur table de nuit" ou "Logo DreamBox"</em></li>
+  </ol>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ============================================ -->
+<h2>Partie 4 — Checklist avant de rendre</h2>
+<!-- ============================================ -->
+
+<div class="info">
+  <strong>💡 Cochez chaque case une fois que c'est fait :</strong>
+</div>
+
+<h3>📄 Pages</h3>
+<ul class="checklist">
+  <li>Page Accueil OK et publiée</li>
+  <li>Page Stations de Rêve (Catalogue) OK et publiée</li>
+  <li>Page Nos Machines OK et publiée</li>
+  <li>Page L'Expérience importée et publiée</li>
+  <li>Page Politique de Confidentialité importée et publiée</li>
+  <li>Lien "Politique de Confidentialité" dans le footer</li>
+</ul>
+
+<h3>🔍 SEO</h3>
+<ul class="checklist">
+  <li>Yoast SEO installé et activé</li>
+  <li>Titre SEO rempli sur chaque page</li>
+  <li>Meta description remplie sur chaque page</li>
+  <li>1 seul H1 par page (déjà respecté dans les templates)</li>
+  <li>Attributs alt renseignés sur toutes les images</li>
+</ul>
+
+<h3>🎨 Design</h3>
+<ul class="checklist">
+  <li>Favicon présent (petite icône dans l'onglet)</li>
+  <li>Les pages s'affichent bien sur ordinateur</li>
+  <li>Les pages s'affichent bien sur tablette</li>
+  <li>Les pages s'affichent bien sur mobile</li>
+</ul>
+
+<h3>🔧 Technique</h3>
+<ul class="checklist">
+  <li>Bandeau cookies installé et fonctionnel</li>
+  <li>Compte admin "steven" créé (formation@stevenberg.fr / steven / 00099)</li>
+  <li>Thème Hello Elementor actif</li>
+</ul>
+
+<h3>📦 Rendu final</h3>
+<ul class="checklist">
+  <li>Export .wpress créé (plugin All-in-One WP Migration → Exporter → Fichier)</li>
+  <li>Capture d'écran desktop de chaque page</li>
+  <li>Cahier des charges (cahier-des-charges.pdf) dans le dossier</li>
+  <li>Noms des étudiants sur le dossier</li>
+  <li>Déposer dans la dropbox</li>
+</ul>
+
+<h3>🚀 Pour l'export .wpress</h3>
+<div class="step">
+  <ol>
+    <li>Aller dans <strong>Extensions → Ajouter</strong></li>
+    <li>Chercher <strong>« All-in-One WP Migration »</strong></li>
+    <li>Installer et activer</li>
+    <li>Dans le menu à gauche : <strong>All-in-One WP Migration → Exporter</strong></li>
+    <li>Cliquer sur <strong>« Exporter vers → Fichier »</strong></li>
+    <li>Attendre que le fichier se génère</li>
+    <li>Télécharger le fichier <strong>.wpress</strong></li>
+  </ol>
+</div>
+
+<div style="margin-top: 50px; padding: 25px; background: #F4F2DC; border-radius: 12px; text-align: center;">
+  <p style="font-size: 18px; font-weight: 600; color: #010ED8;">Bonne chance pour la présentation ! 🌙✨</p>
+  <p style="font-size: 13px; color: #666;">DreamBox — Groupe 2 (Madeleine) — EFREI B2CDI 2025/2026</p>
+</div>
+
+</body>
+</html>
