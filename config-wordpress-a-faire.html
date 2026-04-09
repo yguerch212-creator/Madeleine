@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configuration WordPress à faire - DreamBox</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Poppins', sans-serif; color: #2C2F2F; line-height: 1.8; padding: 50px; max-width: 900px; margin: 0 auto; font-size: 15px; }
+  h1 { font-size: 26px; font-weight: 700; color: #010ED8; }
+  h2 { font-size: 20px; font-weight: 600; color: #010ED8; margin-top: 35px; margin-bottom: 12px; border-bottom: 3px solid #D0DDF2; padding-bottom: 6px; }
+  p { margin-bottom: 10px; }
+  ol, ul { margin-left: 25px; margin-bottom: 15px; }
+  li { margin-bottom: 8px; }
+  .header { text-align: center; margin-bottom: 35px; padding-bottom: 20px; border-bottom: 3px solid #010ED8; }
+  .subtitle { color: #666; font-size: 14px; margin-top: 5px; }
+  .step { background: #F4F2DC; border-left: 5px solid #010ED8; padding: 16px 20px; margin: 15px 0; border-radius: 0 12px 12px 0; }
+  .warning { background: #FFF3CD; border-left: 5px solid #FFC107; padding: 16px 20px; margin: 15px 0; border-radius: 0 12px 12px 0; }
+  code { background: #f0f0f0; padding: 3px 8px; border-radius: 4px; font-size: 14px; color: #010ED8; }
+  strong { color: #010ED8; }
+  .num { display: inline-block; background: #010ED8; color: white; width: 28px; height: 28px; text-align: center; line-height: 28px; border-radius: 50%; font-size: 14px; font-weight: 600; margin-right: 8px; }
+  .checklist { list-style: none; margin-left: 0; }
+  .checklist li { padding: 8px 0; border-bottom: 1px solid #eee; }
+  .checklist li:before { content: "☐ "; font-size: 18px; }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>⚙️ Configuration WordPress — À faire par le groupe</h1>
+  <p class="subtitle">DreamBox — Groupe 2 (Madeleine) — Les étapes à faire directement sur le site</p>
+</div>
+
+<div class="warning">
+  <strong>Ce document liste tout ce qui doit être fait directement dans WordPress.</strong> Les pages (Expérience + Politique de Confidentialité) et le cahier des charges sont déjà prêts dans le repo. Ce PDF couvre le reste.
+</div>
+
+<!-- ============================================ -->
+<h2><span class="num">1</span> Installer et configurer Yoast SEO</h2>
+<!-- ============================================ -->
+
+<div class="step">
+  <p><strong>Si Yoast SEO n'est pas encore installé :</strong></p>
+  <ol>
+    <li>Aller dans <strong>Extensions → Ajouter</strong></li>
+    <li>Chercher <strong>« Yoast SEO »</strong></li>
+    <li>Cliquer <strong>Installer</strong> puis <strong>Activer</strong></li>
+  </ol>
+</div>
+
+<div class="step">
+  <p><strong>Configurer le SEO de chaque page :</strong></p>
+  <p>Pour CHAQUE page du site, ouvrir la page dans l'éditeur WordPress (pas Elementor), descendre en bas jusqu'au bloc Yoast SEO, et remplir :</p>
+
+  <p><strong>Page Accueil :</strong></p>
+  <ul>
+    <li>Titre SEO : <code>DreamBox — Et si tu pouvais choisir tes rêves ?</code></li>
+    <li>Meta description : <code>DreamBox vous permet de voyager dans vos univers préférés pendant votre sommeil. Films, séries, animés — chaque nuit devient une aventure.</code></li>
+  </ul>
+
+  <p><strong>Page Stations de Rêve :</strong></p>
+  <ul>
+    <li>Titre SEO : <code>Stations de Rêve — Catalogue des univers DreamBox</code></li>
+    <li>Meta description : <code>Explorez notre catalogue de cassettes de rêve : films, séries, animés et dessins animés. Choisissez votre prochaine aventure nocturne.</code></li>
+  </ul>
+
+  <p><strong>Page Nos Machines :</strong></p>
+  <ul>
+    <li>Titre SEO : <code>Nos Machines DreamBox — La technologie du rêve</code></li>
+    <li>Meta description : <code>Découvrez les machines DreamBox : fonctionnement, packs disponibles et prix. Transformez votre sommeil en expérience immersive.</code></li>
+  </ul>
+
+  <p><strong>Page L'Expérience :</strong></p>
+  <ul>
+    <li>Titre SEO : <code>L'Expérience DreamBox — FAQ, Témoignages & Qualité du Sommeil</code></li>
+    <li>Meta description : <code>Découvrez les témoignages de nos rêveurs, notre FAQ complète et nos garanties sur la qualité de votre sommeil avec DreamBox.</code></li>
+  </ul>
+
+  <p><strong>Page Politique de Confidentialité :</strong></p>
+  <ul>
+    <li>Titre SEO : <code>Politique de Confidentialité — DreamBox</code></li>
+    <li>Meta description : <code>Consultez la politique de confidentialité de DreamBox. Protection de vos données personnelles conformément au RGPD.</code></li>
+  </ul>
+</div>
+
+<!-- ============================================ -->
+<h2><span class="num">2</span> Installer le bandeau de cookies</h2>
+<!-- ============================================ -->
+
+<div class="step">
+  <ol>
+    <li>Aller dans <strong>Extensions → Ajouter</strong></li>
+    <li>Chercher <strong>« CookieYes »</strong> (gratuit et simple)</li>
+    <li>Cliquer <strong>Installer</strong> puis <strong>Activer</strong></li>
+    <li>Un assistant de configuration va apparaître, suivez les étapes</li>
+    <li>Le bandeau s'affichera automatiquement sur toutes les pages</li>
+  </ol>
+  <p><em>Alternative : « Complianz » est aussi très bien si CookieYes pose problème.</em></p>
+</div>
+
+<!-- ============================================ -->
+<h2><span class="num">3</span> Ajouter le favicon</h2>
+<!-- ============================================ -->
+
+<div class="step">
+  <p>Le favicon c'est la petite icône qui s'affiche dans l'onglet du navigateur.</p>
+  <ol>
+    <li>Aller dans <strong>Apparence → Personnaliser</strong></li>
+    <li>Cliquer sur <strong>Identité du site</strong></li>
+    <li>Tout en bas, cliquer sur <strong>« Sélectionner une icône du site »</strong></li>
+    <li>Importer une image carrée (512×512 pixels idéalement)
+      <br><em>Idée : un croissant de lune, une boîte avec des étoiles, ou le logo DreamBox</em></li>
+    <li>Cliquer <strong>Publier</strong></li>
+  </ol>
+</div>
+
+<!-- ============================================ -->
+<h2><span class="num">4</span> Créer le compte admin du prof</h2>
+<!-- ============================================ -->
+
+<div class="step">
+  <p>Le prof doit pouvoir se connecter. Vérifiez d'abord si le compte existe :</p>
+  <ol>
+    <li>Aller dans <strong>Utilisateurs → Tous les utilisateurs</strong></li>
+    <li>Chercher <strong>« steven »</strong></li>
+  </ol>
+  <p><strong>S'il n'existe pas :</strong></p>
+  <ol>
+    <li>Aller dans <strong>Utilisateurs → Ajouter</strong></li>
+    <li>Identifiant : <code>steven</code></li>
+    <li>Adresse email : <code>formation@stevenberg.fr</code></li>
+    <li>Mot de passe : <code>00099</code> (décocher "envoyer un email" et cocher "définir le mot de passe")</li>
+    <li>Rôle : <strong>Administrateur</strong></li>
+    <li>Cliquer <strong>Ajouter un utilisateur</strong></li>
+  </ol>
+</div>
+
+<!-- ============================================ -->
+<h2><span class="num">5</span> Lier la Politique de Confidentialité dans le footer</h2>
+<!-- ============================================ -->
+
+<div class="step">
+  <p>Quand on clique sur "Politique de Confidentialité" dans le footer, ça doit mener vers la page.</p>
+  
+  <p><strong>Si le footer est fait avec Elementor :</strong></p>
+  <ol>
+    <li>Aller dans <strong>Templates → Theme Builder</strong> (ou trouver le template de footer)</li>
+    <li>Modifier le footer avec Elementor</li>
+    <li>Ajouter un widget <strong>Texte</strong> ou <strong>Menu de navigation</strong></li>
+    <li>Ajouter un lien vers la page Politique de Confidentialité</li>
+    <li>Sauvegarder</li>
+  </ol>
+
+  <p><strong>Si le footer est dans le menu WordPress :</strong></p>
+  <ol>
+    <li>Aller dans <strong>Apparence → Menus</strong></li>
+    <li>Sélectionner le menu du footer (ou en créer un)</li>
+    <li>Ajouter la page « Politique de Confidentialité »</li>
+    <li>Sauvegarder le menu</li>
+  </ol>
+</div>
+
+<!-- ============================================ -->
+<h2><span class="num">6</span> Remplir les attributs alt des images</h2>
+<!-- ============================================ -->
+
+<div class="step">
+  <p>Chaque image du site doit avoir un texte alternatif (pour le SEO et l'accessibilité).</p>
+  <ol>
+    <li>Aller dans <strong>Médias → Bibliothèque</strong></li>
+    <li>Cliquer sur chaque image, une par une</li>
+    <li>Dans le panneau à droite, remplir le champ <strong>« Texte alternatif »</strong></li>
+  </ol>
+  <p><strong>Exemples :</strong></p>
+  <ul>
+    <li>Image de la DreamBox → <code>Machine DreamBox posée sur une table de nuit</code></li>
+    <li>Image d'un univers film → <code>Univers de rêve inspiré du film Inception</code></li>
+    <li>Logo → <code>Logo DreamBox</code></li>
+    <li>Image ambiance nuit → <code>Ambiance nocturne étoilée DreamBox</code></li>
+  </ul>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ============================================ -->
+<h2><span class="num">7</span> Vérifier le responsive</h2>
+<!-- ============================================ -->
+
+<div class="step">
+  <p>Chaque page doit s'afficher correctement sur ordinateur, tablette et mobile.</p>
+  <ol>
+    <li>Ouvrir chaque page avec <strong>Elementor</strong></li>
+    <li>En bas à gauche de l'éditeur, cliquer sur l'icône 📱</li>
+    <li>Basculer entre <strong>Desktop</strong>, <strong>Tablette</strong> et <strong>Mobile</strong></li>
+    <li>Vérifier que rien ne déborde ou ne se chevauche</li>
+    <li>Si un truc bug : ajuster la taille du texte ou les marges pour ce format</li>
+  </ol>
+</div>
+
+<!-- ============================================ -->
+<h2><span class="num">8</span> Exporter le site (rendu final)</h2>
+<!-- ============================================ -->
+
+<div class="step">
+  <p><strong>Le prof demande un fichier .wpress :</strong></p>
+  <ol>
+    <li>Aller dans <strong>Extensions → Ajouter</strong></li>
+    <li>Chercher <strong>« All-in-One WP Migration »</strong></li>
+    <li>Installer et activer</li>
+    <li>Dans le menu à gauche : <strong>All-in-One WP Migration → Exporter</strong></li>
+    <li>Cliquer sur <strong>« Exporter vers → Fichier »</strong></li>
+    <li>Attendre que le fichier se génère (ça peut prendre 1-2 minutes)</li>
+    <li>Télécharger le fichier <strong>.wpress</strong></li>
+  </ol>
+</div>
+
+<div class="step">
+  <p><strong>Capture d'écran desktop :</strong></p>
+  <ol>
+    <li>Ouvrir chaque page dans le navigateur (en taille desktop, plein écran)</li>
+    <li>Faire une capture d'écran (touche <code>Impr. Écran</code> ou outil Capture Windows)</li>
+    <li>Sauvegarder comme image (.png ou .jpg)</li>
+  </ol>
+</div>
+
+<div class="step">
+  <p><strong>Dossier de rendu final :</strong></p>
+  <p>Créer un dossier avec vos noms et mettre dedans :</p>
+  <ul>
+    <li>Le fichier <strong>.wpress</strong></li>
+    <li>Les <strong>captures d'écran</strong> desktop de chaque page</li>
+    <li>Le <strong>cahier-des-charges.pdf</strong></li>
+  </ul>
+  <p>Déposer le tout dans la <strong>dropbox</strong> indiquée par le prof.</p>
+</div>
+
+<!-- ============================================ -->
+<h2>✅ Checklist finale</h2>
+<!-- ============================================ -->
+
+<ul class="checklist">
+  <li>Yoast SEO installé et titres/descriptions remplis pour chaque page</li>
+  <li>Bandeau cookies installé (CookieYes ou Complianz)</li>
+  <li>Favicon ajouté</li>
+  <li>Compte admin "steven" créé</li>
+  <li>Lien "Politique de Confidentialité" dans le footer</li>
+  <li>Attributs alt remplis sur toutes les images</li>
+  <li>Pages responsive (vérifiées desktop / tablette / mobile)</li>
+  <li>Export .wpress téléchargé</li>
+  <li>Captures d'écran desktop faites</li>
+  <li>Cahier des charges dans le dossier de rendu</li>
+  <li>Dossier déposé dans la dropbox</li>
+</ul>
+
+<div style="margin-top: 40px; padding: 20px; background: #F4F2DC; border-radius: 12px; text-align: center;">
+  <p style="font-size: 16px; font-weight: 600; color: #010ED8;">Bon courage pour la suite ! 🌙✨</p>
+</div>
+
+</body>
+</html>
