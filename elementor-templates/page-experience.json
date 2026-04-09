@@ -1,0 +1,1030 @@
+{
+  "title": "L'Exp\u00e9rience",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": {
+    "background_background": "classic",
+    "background_color": "#2C2F2F",
+    "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0"
+    }
+  },
+  "content": [
+    {
+      "elType": "section",
+      "settings": {
+        "background_background": "gradient",
+        "background_color": "#010ED8",
+        "background_color_b": "#2C2F2F",
+        "background_gradient_angle": {
+          "unit": "deg",
+          "size": 180
+        },
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "40",
+          "bottom": "80",
+          "left": "40"
+        },
+        "margin": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0"
+        }
+      },
+      "elements": [
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "L'Exp\u00e9rience DreamBox",
+                "header_size": "h1",
+                "align": "center",
+                "title_color": "#F4F2DC",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 52
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 38
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 28
+                },
+                "typography_font_weight": "700",
+                "text_shadow_text_shadow": {
+                  "horizontal": 0,
+                  "vertical": 0,
+                  "blur": 30,
+                  "color": "rgba(1,14,216,0.6)"
+                }
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align:center; color:#D0DDF2; font-size:18px; max-width:700px; margin:20px auto 0;\">D\u00e9couvrez ce que nos r\u00eaveurs disent de leur voyage nocturne. Chaque nuit, des milliers de personnes transforment leur sommeil en aventure.</p>",
+                "align": "center"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#2C2F2F",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "40",
+          "bottom": "80",
+          "left": "40"
+        },
+        "gap": "extended"
+      },
+      "elements": [
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "\u2728 T\u00e9moignages de nos R\u00eaveurs",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#F4F2DC",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 36
+                },
+                "typography_font_weight": "600"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#2C2F2F",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "40",
+          "bottom": "80",
+          "left": "40"
+        },
+        "structure": "30",
+        "gap": "extended"
+      },
+      "elements": [
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "rgba(1,14,216,0.15)",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1"
+            },
+            "border_color": "rgba(208,221,242,0.2)",
+            "border_radius": {
+              "unit": "px",
+              "top": "15",
+              "right": "15",
+              "bottom": "15",
+              "left": "15"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "30",
+              "right": "25",
+              "bottom": "30",
+              "left": "25"
+            },
+            "box_shadow_box_shadow": {
+              "horizontal": 0,
+              "vertical": 4,
+              "blur": 30,
+              "spread": 0,
+              "color": "rgba(1,14,216,0.3)"
+            },
+            "css_classes": "glassmorphism-card"
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "star-rating",
+              "settings": {
+                "rating_scale": 5,
+                "rating": 5,
+                "star_size": {
+                  "unit": "px",
+                  "size": 18
+                },
+                "stars_color": "#F4F2DC",
+                "align": "center"
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color:#D0DDF2; font-size:15px; text-align:center; font-style:italic;\">\u00ab J'ai voyag\u00e9 dans l'univers de Spirited Away. Je me suis r\u00e9veill\u00e9e repos\u00e9e comme jamais, avec des souvenirs incroyablement nets. C'est magique. \u00bb</p><p style=\"color:#F4F2DC; font-size:13px; text-align:center; margin-top:15px; font-weight:600;\">- Camille, 24 ans</p>"
+              }
+            }
+          ]
+        },
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "rgba(1,14,216,0.15)",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1"
+            },
+            "border_color": "rgba(208,221,242,0.2)",
+            "border_radius": {
+              "unit": "px",
+              "top": "15",
+              "right": "15",
+              "bottom": "15",
+              "left": "15"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "30",
+              "right": "25",
+              "bottom": "30",
+              "left": "25"
+            },
+            "box_shadow_box_shadow": {
+              "horizontal": 0,
+              "vertical": 4,
+              "blur": 30,
+              "spread": 0,
+              "color": "rgba(1,14,216,0.3)"
+            }
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "star-rating",
+              "settings": {
+                "rating_scale": 5,
+                "rating": 5,
+                "star_size": {
+                  "unit": "px",
+                  "size": 18
+                },
+                "stars_color": "#F4F2DC",
+                "align": "center"
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color:#D0DDF2; font-size:15px; text-align:center; font-style:italic;\">\u00ab Mon fils de 8 ans a explor\u00e9 le monde de Dragon Ball. Il s'est r\u00e9veill\u00e9 tout excit\u00e9 en me racontant son aventure. Et il a dormi 10h d'affil\u00e9e ! \u00bb</p><p style=\"color:#F4F2DC; font-size:13px; text-align:center; margin-top:15px; font-weight:600;\">- Thomas, 35 ans</p>"
+              }
+            }
+          ]
+        },
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "rgba(1,14,216,0.15)",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1"
+            },
+            "border_color": "rgba(208,221,242,0.2)",
+            "border_radius": {
+              "unit": "px",
+              "top": "15",
+              "right": "15",
+              "bottom": "15",
+              "left": "15"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "30",
+              "right": "25",
+              "bottom": "30",
+              "left": "25"
+            },
+            "box_shadow_box_shadow": {
+              "horizontal": 0,
+              "vertical": 4,
+              "blur": 30,
+              "spread": 0,
+              "color": "rgba(1,14,216,0.3)"
+            }
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "star-rating",
+              "settings": {
+                "rating_scale": 5,
+                "rating": 4,
+                "star_size": {
+                  "unit": "px",
+                  "size": 18
+                },
+                "stars_color": "#F4F2DC",
+                "align": "center"
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color:#D0DDF2; font-size:15px; text-align:center; font-style:italic;\">\u00ab Insomnies chroniques depuis 3 ans. Avec DreamBox, non seulement je dors enfin, mais en plus je vis des aventures. Hier soir : Interstellar. Juste wow. \u00bb</p><p style=\"color:#F4F2DC; font-size:13px; text-align:center; margin-top:15px; font-weight:600;\">- Nadia, 29 ans</p>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#2C2F2F",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "40",
+          "bottom": "80",
+          "left": "40"
+        },
+        "structure": "30",
+        "gap": "extended"
+      },
+      "elements": [
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "rgba(1,14,216,0.15)",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1"
+            },
+            "border_color": "rgba(208,221,242,0.2)",
+            "border_radius": {
+              "unit": "px",
+              "top": "15",
+              "right": "15",
+              "bottom": "15",
+              "left": "15"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "30",
+              "right": "25",
+              "bottom": "30",
+              "left": "25"
+            },
+            "box_shadow_box_shadow": {
+              "horizontal": 0,
+              "vertical": 4,
+              "blur": 30,
+              "spread": 0,
+              "color": "rgba(1,14,216,0.3)"
+            }
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "star-rating",
+              "settings": {
+                "rating_scale": 5,
+                "rating": 5,
+                "star_size": {
+                  "unit": "px",
+                  "size": 18
+                },
+                "stars_color": "#F4F2DC",
+                "align": "center"
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color:#D0DDF2; font-size:15px; text-align:center; font-style:italic;\">\u00ab En tant que m\u00e9decin du sommeil, j'\u00e9tais sceptique. Apr\u00e8s avoir test\u00e9, les donn\u00e9es polysomnographiques montrent un sommeil profond am\u00e9lior\u00e9 de 23%. Bluffant. \u00bb</p><p style=\"color:#F4F2DC; font-size:13px; text-align:center; margin-top:15px; font-weight:600;\">- Dr. Martin, Neurologue</p>"
+              }
+            }
+          ]
+        },
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "rgba(1,14,216,0.15)",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1"
+            },
+            "border_color": "rgba(208,221,242,0.2)",
+            "border_radius": {
+              "unit": "px",
+              "top": "15",
+              "right": "15",
+              "bottom": "15",
+              "left": "15"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "30",
+              "right": "25",
+              "bottom": "30",
+              "left": "25"
+            },
+            "box_shadow_box_shadow": {
+              "horizontal": 0,
+              "vertical": 4,
+              "blur": 30,
+              "spread": 0,
+              "color": "rgba(1,14,216,0.3)"
+            }
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "star-rating",
+              "settings": {
+                "rating_scale": 5,
+                "rating": 5,
+                "star_size": {
+                  "unit": "px",
+                  "size": 18
+                },
+                "stars_color": "#F4F2DC",
+                "align": "center"
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color:#D0DDF2; font-size:15px; text-align:center; font-style:italic;\">\u00ab J'ai offert la DreamBox \u00e0 ma grand-m\u00e8re de 72 ans. Elle a revu ses souvenirs d'enfance en Provence. Elle pleurait de joie au r\u00e9veil. Merci. \u00bb</p><p style=\"color:#F4F2DC; font-size:13px; text-align:center; margin-top:15px; font-weight:600;\">- Julie, 31 ans</p>"
+              }
+            }
+          ]
+        },
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "rgba(1,14,216,0.15)",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1"
+            },
+            "border_color": "rgba(208,221,242,0.2)",
+            "border_radius": {
+              "unit": "px",
+              "top": "15",
+              "right": "15",
+              "bottom": "15",
+              "left": "15"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "30",
+              "right": "25",
+              "bottom": "30",
+              "left": "25"
+            },
+            "box_shadow_box_shadow": {
+              "horizontal": 0,
+              "vertical": 4,
+              "blur": 30,
+              "spread": 0,
+              "color": "rgba(1,14,216,0.3)"
+            }
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "star-rating",
+              "settings": {
+                "rating_scale": 5,
+                "rating": 5,
+                "star_size": {
+                  "unit": "px",
+                  "size": 18
+                },
+                "stars_color": "#F4F2DC",
+                "align": "center"
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color:#D0DDF2; font-size:15px; text-align:center; font-style:italic;\">\u00ab Couple en crise, on a tent\u00e9 l'exp\u00e9rience \u00e0 deux dans un sc\u00e9nario romantique sur mesure. On ne s'est jamais sentis aussi proches. Th\u00e9rapie par le r\u00eave, a\u0300 recommander. \u00bb</p><p style=\"color:#F4F2DC; font-size:13px; text-align:center; margin-top:15px; font-weight:600;\">- Marc & L\u00e9a, 40 ans</p>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "section",
+      "settings": {
+        "background_background": "gradient",
+        "background_color": "#2C2F2F",
+        "background_color_b": "rgba(1,14,216,0.15)",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "40",
+          "bottom": "80",
+          "left": "40"
+        }
+      },
+      "elements": [
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "\ud83c\udf19 Votre Sommeil, Notre Priorit\u00e9",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#F4F2DC",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 36
+                },
+                "typography_font_weight": "600"
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align:center; color:#D0DDF2; font-size:16px; max-width:800px; margin:20px auto;\">Chez DreamBox, nous ne compromettons jamais la qualit\u00e9 de votre repos. Notre technologie est d\u00e9velopp\u00e9e en collaboration avec des sp\u00e9cialistes du sommeil pour garantir que chaque nuit de r\u00eave soit aussi une nuit de r\u00e9cup\u00e9ration profonde.</p>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#2C2F2F",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "40",
+          "bottom": "80",
+          "left": "40"
+        },
+        "structure": "30",
+        "gap": "extended"
+      },
+      "elements": [
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "rgba(1,14,216,0.1)",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1"
+            },
+            "border_color": "rgba(208,221,242,0.15)",
+            "border_radius": {
+              "unit": "px",
+              "top": "15",
+              "right": "15",
+              "bottom": "15",
+              "left": "15"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "35",
+              "right": "25",
+              "bottom": "35",
+              "left": "25"
+            }
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "\ud83e\udde0",
+                "align": "center",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 48
+                }
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Sommeil Profond Garanti",
+                "header_size": "h3",
+                "align": "center",
+                "title_color": "#F4F2DC",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 20
+                },
+                "typography_font_weight": "600"
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color:#D0DDF2; font-size:14px; text-align:center;\">Notre technologie NeuroSync\u2122 ne d\u00e9clenche les r\u00eaves qu'une fois le sommeil profond atteint (phase N3). R\u00e9sultat : vous dormez mieux ET vous r\u00eavez mieux.</p>"
+              }
+            }
+          ]
+        },
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "rgba(1,14,216,0.1)",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1"
+            },
+            "border_color": "rgba(208,221,242,0.15)",
+            "border_radius": {
+              "unit": "px",
+              "top": "15",
+              "right": "15",
+              "bottom": "15",
+              "left": "15"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "35",
+              "right": "25",
+              "bottom": "35",
+              "left": "25"
+            }
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "\ud83d\udee1\ufe0f",
+                "align": "center",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 48
+                }
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "100% S\u00fbr & Certifi\u00e9",
+                "header_size": "h3",
+                "align": "center",
+                "title_color": "#F4F2DC",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 20
+                },
+                "typography_font_weight": "600"
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color:#D0DDF2; font-size:14px; text-align:center;\">Certifi\u00e9 CE et valid\u00e9 par l'ANSM. Aucune substance, aucune onde nocive. DreamBox utilise uniquement des stimulations sensorielles douces (sons binauraux et aromadiffusion).</p>"
+              }
+            }
+          ]
+        },
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "rgba(1,14,216,0.1)",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1"
+            },
+            "border_color": "rgba(208,221,242,0.15)",
+            "border_radius": {
+              "unit": "px",
+              "top": "15",
+              "right": "15",
+              "bottom": "15",
+              "left": "15"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "35",
+              "right": "25",
+              "bottom": "35",
+              "left": "25"
+            }
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "\ud83d\udcca",
+                "align": "center",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 48
+                }
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "\u00c9tudes Cliniques",
+                "header_size": "h3",
+                "align": "center",
+                "title_color": "#F4F2DC",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 20
+                },
+                "typography_font_weight": "600"
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color:#D0DDF2; font-size:14px; text-align:center;\">3 \u00e9tudes cliniques ind\u00e9pendantes (Universit\u00e9 de Gen\u00e8ve, MIT Sleep Lab, INSERM Paris) confirment : +23% de sommeil profond, +40% de m\u00e9morisation des r\u00eaves, 0 effet secondaire.</p>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#2C2F2F",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "40",
+          "bottom": "80",
+          "left": "40"
+        }
+      },
+      "elements": [
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "background_background": "classic",
+            "background_color": "rgba(1,14,216,0.08)",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1"
+            },
+            "border_color": "rgba(208,221,242,0.15)",
+            "border_radius": {
+              "unit": "px",
+              "top": "20",
+              "right": "20",
+              "bottom": "20",
+              "left": "20"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "50",
+              "right": "50",
+              "bottom": "50",
+              "left": "50"
+            }
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "\u2753 Foire Aux Questions",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#F4F2DC",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 36
+                },
+                "typography_font_weight": "600"
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "toggle",
+              "settings": {
+                "tabs": [
+                  {
+                    "tab_title": "Comment fonctionne DreamBox concr\u00e8tement ?",
+                    "tab_content": "DreamBox utilise une combinaison brevet\u00e9e de sons binauraux, d'aromadiffusion et de micro-stimulations sensorielles pour guider votre cerveau vers des \u00e9tats de r\u00eave lucide contr\u00f4l\u00e9. Vous choisissez votre \"cassette\" (univers de r\u00eave), la machine attend que vous atteigniez le sommeil profond, puis d\u00e9clenche l'exp\u00e9rience en douceur."
+                  },
+                  {
+                    "tab_title": "Est-ce que DreamBox emp\u00eache de bien dormir ?",
+                    "tab_content": "Au contraire ! Notre technologie NeuroSync\u2122 respecte vos cycles de sommeil. L'exp\u00e9rience de r\u00eave ne se d\u00e9clenche qu'une fois le sommeil profond atteint (phase N3). Les \u00e9tudes cliniques montrent une am\u00e9lioration moyenne de 23% du sommeil profond chez nos utilisateurs."
+                  },
+                  {
+                    "tab_title": "Est-ce adapt\u00e9 aux enfants ?",
+                    "tab_content": "Oui ! DreamBox propose des univers sp\u00e9cialement con\u00e7us pour les enfants \u00e0 partir de 6 ans (dessins anim\u00e9s, aventures douces). Un mode \"Enfant\" limite automatiquement la dur\u00e9e de l'exp\u00e9rience et renforce le sommeil r\u00e9parateur. Les parents peuvent superviser via l'app DreamBox."
+                  },
+                  {
+                    "tab_title": "Peut-on faire des cauchemars ?",
+                    "tab_content": "Non. Notre syst\u00e8me SafeDream\u2122 monitore en temps r\u00e9el vos signaux physiologiques (rythme cardiaque, micro-mouvements). Si un stress est d\u00e9tect\u00e9, l'exp\u00e9rience est imm\u00e9diatement adoucie ou arr\u00eat\u00e9e. Vous restez toujours dans un r\u00eave agr\u00e9able."
+                  },
+                  {
+                    "tab_title": "Combien de temps dure une exp\u00e9rience ?",
+                    "tab_content": "La dur\u00e9e d'un r\u00eave DreamBox varie entre 45 minutes et 2 heures de r\u00eave subjectif (per\u00e7u), ce qui correspond \u00e0 environ 15-30 minutes de sommeil r\u00e9el en phase REM. Vous pouvez configurer la dur\u00e9e souhait\u00e9e dans l'application."
+                  },
+                  {
+                    "tab_title": "Y a-t-il des contre-indications m\u00e9dicales ?",
+                    "tab_content": "DreamBox est d\u00e9conseill\u00e9 aux personnes souffrant d'\u00e9pilepsie photosensible ou de troubles dissociatifs s\u00e9v\u00e8res. En cas de doute, consultez votre m\u00e9decin. Pour tous les autres, le dispositif est certifi\u00e9 CE et valid\u00e9 par l'ANSM comme sans danger."
+                  },
+                  {
+                    "tab_title": "Puis-je partager un r\u00eave avec quelqu'un d'autre ?",
+                    "tab_content": "Oui ! Le mode DreamLink\u2122 permet \u00e0 deux utilisateurs \u00e9quip\u00e9s de DreamBox de vivre le m\u00eame r\u00eave simultan\u00e9ment. Id\u00e9al pour les couples ou les amis. Les deux machines se synchronisent via Bluetooth pour cr\u00e9er une exp\u00e9rience partag\u00e9e."
+                  },
+                  {
+                    "tab_title": "Comment sont cr\u00e9\u00e9s les univers de r\u00eave ?",
+                    "tab_content": "Nos univers sont con\u00e7us par une \u00e9quipe de neuroscientifiques, sc\u00e9naristes et sound designers. Chaque \"cassette\" est un agencement pr\u00e9cis de stimuli sensoriels calibr\u00e9s pour \u00e9voquer un univers sp\u00e9cifique. Nous collaborons avec des studios (anim\u00e9, cin\u00e9ma) pour garantir la fid\u00e9lit\u00e9 des exp\u00e9riences."
+                  }
+                ],
+                "border_color": "rgba(208,221,242,0.2)",
+                "title_color": "#F4F2DC",
+                "title_background": "rgba(1,14,216,0.1)",
+                "tab_content_color": "#D0DDF2",
+                "title_typography_typography": "custom",
+                "title_typography_font_family": "Poppins",
+                "title_typography_font_size": {
+                  "unit": "px",
+                  "size": 16
+                },
+                "title_typography_font_weight": "500"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "section",
+      "settings": {
+        "background_background": "gradient",
+        "background_color": "#010ED8",
+        "background_color_b": "#2C2F2F",
+        "background_gradient_angle": {
+          "unit": "deg",
+          "size": 0
+        },
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "40",
+          "bottom": "80",
+          "left": "40"
+        }
+      },
+      "elements": [
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Pr\u00eat \u00e0 transformer vos nuits ?",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#F4F2DC",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 36
+                },
+                "typography_font_weight": "700"
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align:center; color:#D0DDF2; font-size:17px; margin:15px auto; max-width:600px;\">Rejoignez les 50 000+ r\u00eaveurs qui ont d\u00e9j\u00e0 choisi de ne plus laisser leurs nuits au hasard.</p>"
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "D\u00e9couvrir nos machines",
+                "link": {
+                  "url": "/nos-machines/",
+                  "is_external": false
+                },
+                "align": "center",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 16
+                },
+                "typography_font_weight": "600",
+                "background_color": "transparent",
+                "button_text_color": "#F4F2DC",
+                "background_hover_color": "rgba(208,221,242,0.1)",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "2",
+                  "right": "2",
+                  "bottom": "2",
+                  "left": "2"
+                },
+                "border_color": "#D0DDF2",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "30",
+                  "right": "30",
+                  "bottom": "30",
+                  "left": "30"
+                },
+                "button_padding": {
+                  "unit": "px",
+                  "top": "15",
+                  "right": "40",
+                  "bottom": "15",
+                  "left": "40"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

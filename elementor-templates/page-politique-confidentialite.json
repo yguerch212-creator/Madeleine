@@ -1,0 +1,139 @@
+{
+  "title": "Politique de Confidentialit\u00e9",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": {
+    "background_background": "classic",
+    "background_color": "#2C2F2F",
+    "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0"
+    }
+  },
+  "content": [
+    {
+      "elType": "section",
+      "settings": {
+        "background_background": "gradient",
+        "background_color": "#010ED8",
+        "background_color_b": "#2C2F2F",
+        "background_gradient_angle": {
+          "unit": "deg",
+          "size": 180
+        },
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "40",
+          "bottom": "60",
+          "left": "40"
+        }
+      },
+      "elements": [
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Politique de Confidentialit\u00e9",
+                "header_size": "h1",
+                "align": "center",
+                "title_color": "#F4F2DC",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 42
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 32
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 24
+                },
+                "typography_font_weight": "700"
+              }
+            },
+            {
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align:center; color:#D0DDF2; font-size:15px;\">Derni\u00e8re mise \u00e0 jour : Avril 2026</p>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#2C2F2F",
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "40",
+          "bottom": "60",
+          "left": "40"
+        },
+        "content_width": {
+          "unit": "px",
+          "size": 900
+        }
+      },
+      "elements": [
+        {
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "background_background": "classic",
+            "background_color": "rgba(1,14,216,0.06)",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1"
+            },
+            "border_color": "rgba(208,221,242,0.12)",
+            "border_radius": {
+              "unit": "px",
+              "top": "20",
+              "right": "20",
+              "bottom": "20",
+              "left": "20"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "50",
+              "right": "50",
+              "bottom": "50",
+              "left": "50"
+            }
+          },
+          "elements": [
+            {
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<div style=\"color:#D0DDF2; font-size:15px; line-height:1.8;\">\n\n<h2 style=\"color:#F4F2DC; font-size:24px; font-weight:600; margin-bottom:15px;\">1. Introduction</h2>\n<p>La soci\u00e9t\u00e9 <strong>DreamBox SAS</strong> (ci-apr\u00e8s \u00ab DreamBox \u00bb, \u00ab nous \u00bb, \u00ab notre \u00bb) s'engage \u00e0 prot\u00e9ger la vie priv\u00e9e de ses utilisateurs. La pr\u00e9sente politique de confidentialit\u00e9 d\u00e9crit comment nous collectons, utilisons, stockons et prot\u00e9geons vos donn\u00e9es personnelles conform\u00e9ment au R\u00e8glement G\u00e9n\u00e9ral sur la Protection des Donn\u00e9es (RGPD) et \u00e0 la loi Informatique et Libert\u00e9s.</p>\n\n<h2 style=\"color:#F4F2DC; font-size:24px; font-weight:600; margin-top:35px; margin-bottom:15px;\">2. Responsable du traitement</h2>\n<p><strong>DreamBox SAS</strong><br>Si\u00e8ge social : 42 Rue des R\u00eaves, 75011 Paris, France<br>Email : <a href=\"mailto:dream.box@gdream.fr\" style=\"color:#010ED8;\">dream.box@gdream.fr</a><br>T\u00e9l\u00e9phone : +33 6 78 90 12 34</p>\n\n<h2 style=\"color:#F4F2DC; font-size:24px; font-weight:600; margin-top:35px; margin-bottom:15px;\">3. Donn\u00e9es collect\u00e9es</h2>\n<p>Nous collectons les donn\u00e9es suivantes :</p>\n<ul style=\"margin-left:20px;\">\n<li><strong>Donn\u00e9es d'identification :</strong> nom, pr\u00e9nom, adresse email, num\u00e9ro de t\u00e9l\u00e9phone</li>\n<li><strong>Donn\u00e9es de connexion :</strong> adresse IP, type de navigateur, pages visit\u00e9es, dur\u00e9e de visite</li>\n<li><strong>Donn\u00e9es de commande :</strong> historique d'achats, adresse de livraison, informations de paiement (trait\u00e9es par notre prestataire s\u00e9curis\u00e9 Stripe)</li>\n<li><strong>Donn\u00e9es d'utilisation DreamBox :</strong> pr\u00e9f\u00e9rences de r\u00eave, dur\u00e9e d'utilisation, statistiques de sommeil anonymis\u00e9es</li>\n<li><strong>Donn\u00e9es de cookies :</strong> pr\u00e9f\u00e9rences de navigation, cookies analytiques et fonctionnels</li>\n</ul>\n\n<h2 style=\"color:#F4F2DC; font-size:24px; font-weight:600; margin-top:35px; margin-bottom:15px;\">4. Finalit\u00e9s du traitement</h2>\n<p>Vos donn\u00e9es sont trait\u00e9es pour :</p>\n<ul style=\"margin-left:20px;\">\n<li>La gestion de votre compte et de vos commandes</li>\n<li>L'am\u00e9lioration de nos services et de l'exp\u00e9rience utilisateur</li>\n<li>L'envoi de communications commerciales (avec votre consentement)</li>\n<li>Le respect de nos obligations l\u00e9gales et r\u00e9glementaires</li>\n<li>L'analyse statistique anonymis\u00e9e pour la recherche et le d\u00e9veloppement</li>\n</ul>\n\n<h2 style=\"color:#F4F2DC; font-size:24px; font-weight:600; margin-top:35px; margin-bottom:15px;\">5. Base l\u00e9gale du traitement</h2>\n<p>Le traitement de vos donn\u00e9es repose sur :</p>\n<ul style=\"margin-left:20px;\">\n<li><strong>L'ex\u00e9cution du contrat :</strong> pour le traitement de vos commandes et la fourniture du service</li>\n<li><strong>Le consentement :</strong> pour l'envoi de newsletters et communications marketing</li>\n<li><strong>L'int\u00e9r\u00eat l\u00e9gitime :</strong> pour l'am\u00e9lioration de nos services et la s\u00e9curit\u00e9</li>\n<li><strong>L'obligation l\u00e9gale :</strong> pour les obligations comptables et fiscales</li>\n</ul>\n\n<h2 style=\"color:#F4F2DC; font-size:24px; font-weight:600; margin-top:35px; margin-bottom:15px;\">6. Dur\u00e9e de conservation</h2>\n<p>Vos donn\u00e9es personnelles sont conserv\u00e9es pendant la dur\u00e9e n\u00e9cessaire aux finalit\u00e9s pour lesquelles elles ont \u00e9t\u00e9 collect\u00e9es :</p>\n<ul style=\"margin-left:20px;\">\n<li><strong>Donn\u00e9es clients :</strong> 3 ans apr\u00e8s la derni\u00e8re interaction</li>\n<li><strong>Donn\u00e9es de commande :</strong> 10 ans (obligation comptable)</li>\n<li><strong>Cookies :</strong> 13 mois maximum</li>\n<li><strong>Donn\u00e9es d'utilisation DreamBox :</strong> anonymis\u00e9es apr\u00e8s 24 mois</li>\n</ul>\n\n<h2 style=\"color:#F4F2DC; font-size:24px; font-weight:600; margin-top:35px; margin-bottom:15px;\">7. Partage des donn\u00e9es</h2>\n<p>Vos donn\u00e9es ne sont jamais vendues. Elles peuvent \u00eatre partag\u00e9es avec :</p>\n<ul style=\"margin-left:20px;\">\n<li><strong>Nos sous-traitants :</strong> h\u00e9bergement (OVH, France), paiement (Stripe), livraison (Colissimo)</li>\n<li><strong>Les autorit\u00e9s comp\u00e9tentes :</strong> uniquement sur demande l\u00e9gale</li>\n</ul>\n<p>Tous nos sous-traitants sont situ\u00e9s dans l'UE ou b\u00e9n\u00e9ficient de garanties ad\u00e9quates (clauses contractuelles types).</p>\n\n<h2 style=\"color:#F4F2DC; font-size:24px; font-weight:600; margin-top:35px; margin-bottom:15px;\">8. S\u00e9curit\u00e9 des donn\u00e9es</h2>\n<p>Nous mettons en \u0153uvre des mesures techniques et organisationnelles adapt\u00e9es :</p>\n<ul style=\"margin-left:20px;\">\n<li>Chiffrement SSL/TLS pour toutes les transmissions</li>\n<li>Chiffrement AES-256 pour le stockage des donn\u00e9es sensibles</li>\n<li>Acc\u00e8s restreint aux donn\u00e9es (principe du moindre privil\u00e8ge)</li>\n<li>Audits de s\u00e9curit\u00e9 r\u00e9guliers</li>\n<li>Plan de r\u00e9ponse aux incidents</li>\n</ul>\n\n<h2 style=\"color:#F4F2DC; font-size:24px; font-weight:600; margin-top:35px; margin-bottom:15px;\">9. Vos droits</h2>\n<p>Conform\u00e9ment au RGPD, vous disposez des droits suivants :</p>\n<ul style=\"margin-left:20px;\">\n<li><strong>Droit d'acc\u00e8s :</strong> obtenir une copie de vos donn\u00e9es personnelles</li>\n<li><strong>Droit de rectification :</strong> corriger des donn\u00e9es inexactes</li>\n<li><strong>Droit \u00e0 l'effacement :</strong> demander la suppression de vos donn\u00e9es</li>\n<li><strong>Droit \u00e0 la limitation :</strong> restreindre le traitement de vos donn\u00e9es</li>\n<li><strong>Droit \u00e0 la portabilit\u00e9 :</strong> recevoir vos donn\u00e9es dans un format structur\u00e9</li>\n<li><strong>Droit d'opposition :</strong> vous opposer au traitement de vos donn\u00e9es</li>\n<li><strong>Droit de retrait du consentement :</strong> \u00e0 tout moment, sans affecter la lic\u00e9it\u00e9 du traitement ant\u00e9rieur</li>\n</ul>\n<p>Pour exercer vos droits, contactez-nous \u00e0 : <a href=\"mailto:dream.box@gdream.fr\" style=\"color:#010ED8;\">dream.box@gdream.fr</a></p>\n<p>En cas de r\u00e9clamation, vous pouvez contacter la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libert\u00e9s) : <a href=\"https://www.cnil.fr\" style=\"color:#010ED8;\" target=\"_blank\">www.cnil.fr</a></p>\n\n<h2 style=\"color:#F4F2DC; font-size:24px; font-weight:600; margin-top:35px; margin-bottom:15px;\">10. Cookies</h2>\n<p>Notre site utilise des cookies pour :</p>\n<ul style=\"margin-left:20px;\">\n<li><strong>Cookies essentiels :</strong> fonctionnement du site (session, panier)</li>\n<li><strong>Cookies analytiques :</strong> Google Analytics (anonymis\u00e9) pour am\u00e9liorer notre site</li>\n<li><strong>Cookies fonctionnels :</strong> m\u00e9moriser vos pr\u00e9f\u00e9rences</li>\n</ul>\n<p>Vous pouvez g\u00e9rer vos pr\u00e9f\u00e9rences de cookies via le bandeau affich\u00e9 lors de votre premi\u00e8re visite ou dans les param\u00e8tres de votre navigateur.</p>\n\n<h2 style=\"color:#F4F2DC; font-size:24px; font-weight:600; margin-top:35px; margin-bottom:15px;\">11. Modifications</h2>\n<p>Nous nous r\u00e9servons le droit de modifier cette politique de confidentialit\u00e9 \u00e0 tout moment. Toute modification substantielle vous sera notifi\u00e9e par email ou par un avis visible sur notre site. La date de derni\u00e8re mise \u00e0 jour est indiqu\u00e9e en haut de cette page.</p>\n\n<h2 style=\"color:#F4F2DC; font-size:24px; font-weight:600; margin-top:35px; margin-bottom:15px;\">12. Contact</h2>\n<p>Pour toute question relative \u00e0 cette politique de confidentialit\u00e9 :</p>\n<p><strong>DreamBox SAS</strong><br>42 Rue des R\u00eaves, 75011 Paris<br>Email : <a href=\"mailto:dream.box@gdream.fr\" style=\"color:#010ED8;\">dream.box@gdream.fr</a><br>T\u00e9l\u00e9phone : +33 6 78 90 12 34</p>\n\n</div>"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
