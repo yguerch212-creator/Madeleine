@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Audit SEO — HelloFresh France</title>
+<style>
+  body {
+    font-family: Arial, Calibri, sans-serif;
+    font-size: 11pt;
+    color: #000;
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 0 30px;
+  }
+  h1 {
+    font-size: 20pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  h2 {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  h3 {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+  p {
+    margin-bottom: 8px;
+  }
+  ul, ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  li {
+    margin-bottom: 4px;
+  }
+  .meta {
+    color: #555;
+    font-size: 10pt;
+    margin-bottom: 25px;
+  }
+  .verdict {
+    font-weight: bold;
+  }
+  .good { color: #1a7f1a; }
+  .warn { color: #b87800; }
+  .bad { color: #cc0000; }
+  .separator {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 25px 0;
+  }
+  table {
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 10.5pt;
+    width: 100%;
+  }
+  table, th, td {
+    border: 1px solid #999;
+  }
+  th, td {
+    padding: 5px 8px;
+    text-align: left;
+  }
+  th {
+    background: #eee;
+    font-weight: bold;
+  }
+  code {
+    background: #f4f4f4;
+    padding: 1px 4px;
+    font-size: 10pt;
+  }
+  .page-break {
+    page-break-before: always;
+  }
+</style>
+</head>
+<body>
+
+<h1>Audit SEO — HelloFresh France</h1>
+<p class="meta">
+  Site audité : <strong>https://www.hellofresh.fr</strong><br>
+  Date de l'audit : 21 avril 2026<br>
+  Réalisé par : Groupe 2 — Madeleine (EFREI B2CDI)<br>
+  Outils utilisés : Google PageSpeed Insights, SEOmeta in 1 Click, SEMrush, Ahrefs (données publiques), Screaming Frog (simulation), Majestic SEO (estimation)
+</p>
+
+<hr class="separator">
+
+<!-- ============================================================ -->
+<h2>PARTIE 1 — SEO TECHNIQUE</h2>
+<!-- ============================================================ -->
+
+<h3>1.1 Core Web Vitals</h3>
+
+<p>Les Core Web Vitals ont été mesurés via Google PageSpeed Insights (stratégie mobile). Résultat global : <span class="verdict bad">ÉCHEC</span> — le site ne passe pas l'évaluation Core Web Vitals.</p>
+
+<table>
+  <tr><th>Métrique</th><th>Valeur mesurée</th><th>Seuil « Bon »</th><th>Verdict</th></tr>
+  <tr><td>LCP (Largest Contentful Paint)</td><td>2,3 s</td><td>≤ 2,5 s</td><td class="good">✅ Bon</td></tr>
+  <tr><td>INP (Interaction to Next Paint)</td><td>333 ms</td><td>≤ 200 ms</td><td class="warn">⚠️ À améliorer</td></tr>
+  <tr><td>CLS (Cumulative Layout Shift)</td><td>0,33</td><td>≤ 0,1</td><td class="warn">⚠️ À améliorer</td></tr>
+  <tr><td>FCP (First Contentful Paint)</td><td>1,7 s</td><td>≤ 1,8 s</td><td class="good">✅ Bon</td></tr>
+  <tr><td>TTFB (Time To First Byte)</td><td>1,4 s</td><td>≤ 0,8 s</td><td class="bad">❌ Problème</td></tr>
+</table>
+
+<p><strong>Analyse :</strong></p>
+<ul>
+  <li><strong>LCP (2,3s) :</strong> Le plus gros élément visible (hero image / bannière promotionnelle) se charge dans les limites acceptables, mais reste proche du seuil. Comparé à des concurrents comme Quitoque (~1,8s), c'est en retrait.</li>
+  <li><strong>INP (333ms) :</strong> L'interactivité est dégradée. Les clics (ajout au panier, navigation entre recettes) mettent trop de temps à produire un retour visuel. Cela est probablement dû au JavaScript lourd (React/Next.js, GTM, scripts tiers marketing).</li>
+  <li><strong>CLS (0,33) :</strong> Les décalages de layout sont importants — 3× le seuil acceptable. Les images sans dimensions explicites, les polices custom (Agrandir Tight, Roboto) chargées en swap, et les bannières promotionnelles insérées dynamiquement provoquent ces sauts visuels.</li>
+  <li><strong>TTFB (1,4s) :</strong> Le temps de réponse du serveur est élevé. Pour un site Next.js en SSR, cela suggère un CDN mal configuré ou un temps de calcul côté serveur trop long.</li>
+</ul>
+
+<p><strong>Recommandations :</strong></p>
+<ol>
+  <li>Réduire le JavaScript bloquant (code-splitting, lazy-loading des composants non-critiques)</li>
+  <li>Ajouter des attributs <code>width</code> et <code>height</code> explicites sur toutes les images pour réduire le CLS</li>
+  <li>Investiguer le TTFB élevé : cache CDN (Cloudflare/Fastly), optimisation SSR, pre-rendering des pages statiques</li>
+  <li>Différer le chargement de GTM et des scripts marketing non-essentiels</li>
+</ol>
+
+<h3>1.2 Optimisation des images</h3>
+
+<p><span class="verdict warn">⚠️ À améliorer</span> — 29 images sur 76 sont trop lourdes (38% du total).</p>
+
+<p><strong>Constats :</strong></p>
+<ul>
+  <li>HelloFresh utilise un CDN d'images dédié (<code>img.hellofresh.com</code> / <code>media.hellofresh.com</code>) avec transformation automatique via paramètres URL (<code>w_256,q_100,f_auto,c_limit,fl_lossy</code>).</li>
+  <li>Le format <code>f_auto</code> sert du WebP aux navigateurs compatibles — c'est une bonne pratique.</li>
+  <li>Cependant, certaines images de recettes et la hero image sont servies en haute qualité (<code>q_100</code>) sans nécessité, ce qui alourdit la page.</li>
+  <li>Les images des recettes (carrousel) ne sont pas toutes lazy-loadées.</li>
+  <li>Le logo est préchargé en 2 résolutions (96px et 256px via <code>imageSrcSet</code>) — bonne pratique.</li>
+</ul>
+
+<p><strong>Recommandations :</strong></p>
+<ol>
+  <li>Réduire la qualité à q_80 pour les images non-hero (gain estimé ~30% sur le poids)</li>
+  <li>Implémenter le lazy-loading systématique (<code>loading="lazy"</code>) sur toutes les images sous le fold</li>
+  <li>Vérifier que les dimensions sont servies adaptées au viewport mobile (pas d'images desktop sur mobile)</li>
+</ol>
+
+<h3>1.3 Mobile Responsive</h3>
+
+<p><span class="verdict good">✅ Bon</span></p>
+
+<ul>
+  <li>La balise <code>&lt;meta name="viewport" content="width=device-width"&gt;</code> est présente.</li>
+  <li>Le site est conçu en mobile-first (framework React/Next.js avec design system interne "Zest").</li>
+  <li>La navigation hamburger est fonctionnelle, les formulaires sont adaptés au tactile.</li>
+  <li>L'application mobile HelloFresh est référencée et promue directement sur le site.</li>
+</ul>
+
+<h3>1.4 HTTPS</h3>
+
+<p><span class="verdict good">✅ Bon</span></p>
+
+<ul>
+  <li>Certificat SSL valide sur <code>www.hellofresh.fr</code>.</li>
+  <li>Redirection HTTP → HTTPS en place.</li>
+  <li>Les hreflang pointent tous vers des URLs HTTPS.</li>
+  <li>Aucun mixed content détecté sur la page d'accueil.</li>
+</ul>
+
+<h3>1.5 Sitemap.xml et robots.txt</h3>
+
+<p><span class="verdict good">✅ Bon</span></p>
+
+<p><strong>robots.txt</strong> — Présent et bien configuré :</p>
+<ul>
+  <li>Bloque correctement les pages privées (<code>/my-account</code>), les paramètres de recherche, les pages avec paramètres sensibles (<code>?email=</code>, <code>?resetKey=</code>).</li>
+  <li>Exception pertinente : autorise <code>/my-account/deliveries/menu</code> (le menu de la semaine, utile pour le SEO).</li>
+  <li>Référence 6 sitemaps distincts dans le robots.txt.</li>
+</ul>
+
+<p><strong>Sitemaps</strong> — Bien structurés en index :</p>
+<table>
+  <tr><th>Sitemap</th><th>Nombre d'URLs</th></tr>
+  <tr><td>sitemap_recipe_pages.xml</td><td>8 383</td></tr>
+  <tr><td>sitemap_recipe_collections.xml</td><td>180</td></tr>
+  <tr><td>sitemap_stories.xml</td><td>115</td></tr>
+  <tr><td>sitemap_transactional_pages.xml</td><td>21</td></tr>
+  <tr><td>sitemap_others.xml</td><td>17</td></tr>
+  <tr><td><strong>Total</strong></td><td><strong>8 716</strong></td></tr>
+</table>
+
+<p><strong>Remarque :</strong> La grande majorité des URLs (96%) sont des pages de recettes. C'est cohérent avec la stratégie SEO du site (attirer du trafic organique via les recettes).</p>
+
+<h3>1.6 Taux d'indexation</h3>
+
+<p><span class="verdict warn">⚠️ Estimation partielle</span></p>
+
+<ul>
+  <li>Le sitemap référence <strong>8 716 URLs</strong>.</li>
+  <li>La requête <code>site:hellofresh.fr</code> sur les moteurs de recherche retourne des résultats variés couvrant les principales sections (recettes, panier-repas, about, contact, FAQ, menu de la semaine).</li>
+  <li>Sans accès à Google Search Console, le taux exact d'indexation ne peut pas être déterminé.</li>
+  <li><strong>Estimation :</strong> Étant donné la taille du site (8 700+ URLs) et le bon état technique (sitemaps, robots.txt), le taux d'indexation est probablement élevé (>80%).</li>
+  <li>Attention : les pages de recettes datant de 2018 dans le sitemap (ex : <code>lastmod: 2018-05-16</code>) pourraient avoir été désindexées si le contenu n'a pas été mis à jour.</li>
+</ul>
+
+<h3>1.7 Erreurs 404</h3>
+
+<p><span class="verdict warn">⚠️ À améliorer</span> — 4 erreurs 404 détectées.</p>
+
+<ul>
+  <li>4 URLs retournent un code 404 lors du crawl.</li>
+  <li>C'est un nombre faible pour un site de 8 700+ pages, ce qui est positif.</li>
+  <li>Cependant, toute erreur 404 gaspille du budget de crawl et dégrade l'expérience utilisateur.</li>
+</ul>
+
+<p><strong>Recommandation :</strong> Identifier les 4 URLs en 404, mettre en place des redirections 301 vers les pages les plus proches ou la page d'accueil.</p>
+
+<h3>1.8 Sous-domaines</h3>
+
+<p><span class="verdict good">✅ Bon — Architecture cohérente</span></p>
+
+<p>Sous-domaines identifiés :</p>
+<ul>
+  <li><code>www.hellofresh.fr</code> — site principal (FR)</li>
+  <li><code>hubspot.hellofresh.com</code> — formulaires de partenariat (HubSpot)</li>
+  <li><code>media.hellofresh.com</code> / <code>img.hellofresh.com</code> — CDN images</li>
+  <li><code>cdn.hellofresh.com</code> — assets statiques</li>
+</ul>
+<p>L'architecture est propre : le contenu SEO est concentré sur <code>www.hellofresh.fr</code>, les assets sont sur des sous-domaines dédiés (pas de dilution d'autorité). Le blog n'est pas sur un sous-domaine séparé (il est intégré via <code>/blog/</code> ou les stories), ce qui est une bonne pratique SEO.</p>
+
+<hr class="separator">
+<div class="page-break"></div>
+
+<!-- ============================================================ -->
+<h2>PARTIE 2 — SEO ON-SITE (CONTENU)</h2>
+<!-- ============================================================ -->
+
+<h3>2.1 Balise Title</h3>
+
+<p><span class="verdict good">✅ Bon</span></p>
+
+<ul>
+  <li><strong>Title :</strong> « HelloFresh | La Box à Cuisiner, développée en France »</li>
+  <li><strong>Longueur :</strong> 52 caractères (seuil recommandé : ≤ 65 caractères) ✅</li>
+  <li><strong>Mots-clés :</strong> « HelloFresh » (marque) + « Box à Cuisiner » (mot-clé commercial) + « France » (localisation) — très bien ciblé.</li>
+  <li><strong>Point fort :</strong> Le pipe (|) sépare la marque du descriptif, format classique et efficace.</li>
+</ul>
+
+<p><strong>Pages recettes :</strong> Le format « [Nom recette] Recette | HelloFresh » est cohérent et optimisé (ex : « Filet de poulet et pommes de terre au pesto Recette | HelloFresh »).</p>
+
+<h3>2.2 Meta Description</h3>
+
+<p><span class="verdict good">✅ Bon</span></p>
+
+<ul>
+  <li><strong>Contenu :</strong> « Vos plats préférés livrés chez vous. Simplifiez vos repas avec nos recettes gourmandes. »</li>
+  <li><strong>Longueur :</strong> 87 caractères (seuil recommandé : &lt; 155 caractères) ✅</li>
+  <li><strong>Incitatif :</strong> Ton direct, promesse claire (livraison + simplicité + gourmandise) — donne envie de cliquer.</li>
+</ul>
+
+<p><strong>Remarque :</strong> La description est peut-être un peu courte. On pourrait ajouter un CTA (« Découvrez nos 54+ recettes de la semaine ») pour occuper plus d'espace dans les SERPs et augmenter le CTR.</p>
+
+<h3>2.3 Structure des Headings</h3>
+
+<p><span class="verdict bad">❌ Problème — Structure incohérente</span></p>
+
+<table>
+  <tr><th>Balise</th><th>Nombre</th></tr>
+  <tr><td>H1</td><td>4</td></tr>
+  <tr><td>H2</td><td>5</td></tr>
+  <tr><td>H3</td><td>3</td></tr>
+  <tr><td>H4, H5, H6</td><td>0</td></tr>
+</table>
+
+<p><strong>Problèmes identifiés :</strong></p>
+<ul>
+  <li><strong>4 balises H1</strong> sur la page d'accueil — il devrait y en avoir une seule. Avoir plusieurs H1 dilue le signal SEO du titre principal.</li>
+  <li>Un H3 apparaît au-dessus de H1 dans le DOM, ce qui brise la hiérarchie sémantique.</li>
+  <li>Les H2 couvrent les sections principales (témoignages, FAQ, offre) mais sans cohérence de structure.</li>
+</ul>
+
+<p><strong>Recommandations :</strong></p>
+<ol>
+  <li>Garder un seul H1 par page (ex : « Des millions de repas livrés en France »)</li>
+  <li>Transformer les H1 supplémentaires en H2</li>
+  <li>Respecter la hiérarchie descendante (H1 → H2 → H3), jamais un H3 avant un H1</li>
+</ol>
+
+<h3>2.4 Utilisation des Keywords</h3>
+
+<p><span class="verdict good">✅ Bon</span></p>
+
+<p><strong>Mots-clés identifiés :</strong></p>
+<table>
+  <tr><th>Type</th><th>Mots-clés</th></tr>
+  <tr><td>Principal</td><td>box à cuisiner, HelloFresh, box repas</td></tr>
+  <tr><td>Secondaires</td><td>recettes faciles, livraison repas, panier recette, ingrédients frais, menu de la semaine</td></tr>
+  <tr><td>Longue traîne</td><td>recettes HelloFresh, box repas livrés, recettes faciles à la maison</td></tr>
+</table>
+
+<p><strong>Intention de recherche :</strong> Transactionnelle — les utilisateurs cherchent à recevoir des plats/ingrédients à cuisiner chez soi. Le site répond bien à cette intention avec des CTA clairs (« Commander », « Jusqu'à 85€ offerts »).</p>
+
+<p>La balise <code>&lt;meta name="keywords"&gt;</code> contient « cooking, HelloFresh » — c'est minimaliste et en anglais, mais cette balise n'a plus d'impact sur le ranking Google depuis 2009.</p>
+
+<h3>2.5 Attribut Alt des images</h3>
+
+<p><span class="verdict bad">❌ Problème</span></p>
+
+<ul>
+  <li><strong>47,5% des images n'ont pas d'attribut alt</strong> — près de la moitié.</li>
+  <li>C'est un problème majeur pour l'accessibilité (WCAG) et le SEO image.</li>
+  <li>Les images de recettes sans alt manquent une opportunité de se positionner sur Google Images (« recette poulet pesto », etc.).</li>
+</ul>
+
+<p><strong>Recommandations :</strong></p>
+<ol>
+  <li>Ajouter un attribut alt descriptif sur chaque image de recette (ex : <code>alt="Filet de poulet au pesto avec pommes de terre et salade"</code>)</li>
+  <li>Pour les images décoratives, utiliser <code>alt=""</code> (alt vide, pas absent)</li>
+  <li>Automatiser la génération des alt à partir du nom de la recette dans le CMS</li>
+</ol>
+
+<h3>2.6 Diversité HTML</h3>
+
+<p><span class="verdict good">✅ Bon</span></p>
+
+<ul>
+  <li>Le site utilise une variété d'éléments HTML : images, vidéos témoignages, carrousels, listes, icônes SVG, formulaires interactifs.</li>
+  <li>Pas de « pavé de texte » — le contenu est aéré avec des visuels bien placés.</li>
+  <li>Les pages de recettes contiennent des données structurées (ingrédients, calories, temps de préparation, allergènes, valeurs nutritionnelles).</li>
+  <li><strong>Point d'amélioration :</strong> Pas de balisage Schema.org <code>Recipe</code> détecté en JSON-LD sur la page d'accueil. Les pages de recettes individuelles semblent utiliser des données structurées, mais cela mériterait une vérification via le Rich Results Test de Google.</li>
+</ul>
+
+<h3>2.7 URLs / Slugs</h3>
+
+<p><span class="verdict warn">⚠️ À améliorer</span></p>
+
+<p><strong>Problèmes détectés par le crawl :</strong></p>
+<table>
+  <tr><th>Problème</th><th>% d'URLs touchées</th></tr>
+  <tr><td>Caractères non-ASCII (accents, cédilles)</td><td>4,07%</td></tr>
+  <tr><td>Underscores (_) au lieu de tirets (-)</td><td>5,76%</td></tr>
+  <tr><td>Majuscules dans l'URL</td><td>6,44%</td></tr>
+  <tr><td>Espaces encodés</td><td>4,07%</td></tr>
+</table>
+
+<p><strong>Exemples d'URLs propres :</strong></p>
+<ul>
+  <li><code>/recipes/recettes-faciles</code> ✅</li>
+  <li><code>/panier-repas/menu-de-la-semaine</code> ✅</li>
+  <li><code>/about/how-it-works</code> ✅</li>
+</ul>
+
+<p><strong>Exemples d'URLs problématiques :</strong></p>
+<ul>
+  <li>URLs de recettes avec des IDs hexadécimaux longs : <code>/recipes/filet-de-poulet-et-pommes-de-terre-au-pesto-5afbf80830006c54c636b1d2</code> — l'ID MongoDB en fin d'URL n'apporte rien au SEO.</li>
+</ul>
+
+<p><strong>Recommandations :</strong></p>
+<ol>
+  <li>Supprimer les identifiants techniques des URLs de recettes</li>
+  <li>Remplacer les underscores par des tirets</li>
+  <li>Forcer les URLs en minuscules</li>
+  <li>Translitérer les caractères accentués (é → e, ç → c)</li>
+</ol>
+
+<h3>2.8 Qualité du contenu rédactionnel</h3>
+
+<p><span class="verdict bad">❌ Problème — Thin content</span></p>
+
+<ul>
+  <li><strong>108 URLs contiennent moins de 300 mots</strong> de contenu textuel.</li>
+  <li>La page d'accueil elle-même est relativement pauvre en texte (contenu principalement visuel et promotionnel).</li>
+  <li>Les pages de recettes individuelles compensent avec un contenu riche (ingrédients, étapes, valeurs nutritionnelles, allergènes) — c'est le point fort du site.</li>
+</ul>
+
+<p><strong>Points positifs :</strong></p>
+<ul>
+  <li><strong>Contenu evergreen :</strong> Les recettes sont du contenu froid et durable, pertinent toute l'année. ✅</li>
+  <li><strong>Maillage interne :</strong> Bien orienté vers la conversion — les recettes renvoient vers les collections, les collections vers la commande. ✅</li>
+  <li><strong>Pas de duplicate content apparent</strong> entre les recettes (chaque recette a un contenu unique).</li>
+</ul>
+
+<p><strong>Points négatifs :</strong></p>
+<ul>
+  <li>Les pages « collection » (ex : /recipes/recettes-faciles) sont pauvres en contenu éditorial.</li>
+  <li>Absence de blog structuré avec des articles longs (guides, comparatifs, conseils nutritionnels) qui pourraient capter du trafic informationnel.</li>
+</ul>
+
+<p><strong>Recommandations :</strong></p>
+<ol>
+  <li>Enrichir les 108 pages thin content avec au minimum 300 mots de texte pertinent</li>
+  <li>Créer une section blog/magazine avec des articles > 1000 mots (ex : « Comment manger équilibré en famille », « Guide des box repas en France »)</li>
+  <li>Ajouter du contenu éditorial aux pages de collection de recettes</li>
+</ol>
+
+<hr class="separator">
+<div class="page-break"></div>
+
+<!-- ============================================================ -->
+<h2>PARTIE 3 — SEO OFF-SITE (POPULARITÉ / AUTORITÉ)</h2>
+<!-- ============================================================ -->
+
+<h3>3.1 Citation Flow / Trust Flow (estimation Majestic)</h3>
+
+<p><span class="verdict good">✅ Bon — Profil d'autorité solide</span></p>
+
+<p><strong>Estimations basées sur les données publiques disponibles :</strong></p>
+<table>
+  <tr><th>Métrique</th><th>Valeur estimée</th><th>Interprétation</th></tr>
+  <tr><td>Domain Rating (Ahrefs)</td><td>~70-75/100</td><td>Autorité élevée (top 5% mondial)</td></tr>
+  <tr><td>Authority Score (SEMrush)</td><td>~65-70/100</td><td>Très bonne autorité</td></tr>
+  <tr><td>Trust Flow (Majestic)</td><td>~40-50/100</td><td>Confiance élevée (liens de qualité)</td></tr>
+  <tr><td>Citation Flow (Majestic)</td><td>~50-60/100</td><td>Volume de citations important</td></tr>
+  <tr><td>Domaines référents</td><td>~1 820</td><td>Profil diversifié (source SEMrush)</td></tr>
+</table>
+
+<p><strong>Analyse :</strong> HelloFresh bénéficie de l'autorité du groupe international (hellofresh.com, DR ~80+). Le ratio TF/CF estimé (~0,75-0,85) est sain — il indique que les backlinks sont majoritairement de qualité et non spammés. Un ratio inférieur à 0,5 serait préoccupant.</p>
+
+<h3>3.2 Évaluation des backlinks</h3>
+
+<p><span class="verdict good">✅ Bon — Profil naturel et diversifié</span></p>
+
+<p><strong>Qui cite hellofresh.fr :</strong></p>
+<ul>
+  <li><strong>Presse nationale :</strong> Capital.fr (article détaillé sur la stratégie de HelloFresh France), Le Figaro, 20 Minutes — liens éditoriaux de très haute qualité (DA 80+).</li>
+  <li><strong>Sites de confiance :</strong> Trustpilot.com (36 355 avis, note 4/5), Wikipedia (page HelloFresh SE).</li>
+  <li><strong>Blogs culinaires / lifestyle :</strong> Une-case-en-plus.com, Academy-ecommerce.com, etc. — typique des « mommy bloggers » et blogs food qui font des tests/avis. Liens souvent en dofollow via le programme d'affiliation.</li>
+  <li><strong>Réseaux sociaux :</strong> Instagram (@hellofreshfrance, 178K abonnés), Facebook — signaux sociaux importants.</li>
+  <li><strong>Partenaires institutionnels :</strong> FFBB (Fédération Française de Basket-Ball) — HelloFresh est fournisseur officiel des équipes de France, ce qui génère des backlinks sportifs de qualité.</li>
+  <li><strong>Portails emploi :</strong> Welcome to the Jungle (page entreprise), Indeed, Glassdoor.</li>
+</ul>
+
+<p><strong>Types d'ancres :</strong></p>
+<ul>
+  <li>Ancres de marque : « HelloFresh », « HelloFresh France » — majoritaires (sain)</li>
+  <li>Ancres URL : « hellofresh.fr » — fréquent</li>
+  <li>Ancres descriptives : « box repas », « livraison de repas », « code promo HelloFresh » — présentes via les blogs affiliés</li>
+  <li>Ancres génériques : « cliquez ici », « site officiel » — minoritaires</li>
+</ul>
+
+<p><strong>Ratio dofollow / nofollow :</strong> La majorité des liens de presse et de blogs sont en dofollow. Les liens Trustpilot et réseaux sociaux sont en nofollow, ce qui est normal et sain pour un profil naturel.</p>
+
+<p><strong>Point de vigilance :</strong> L'analyse SingleGrain (2021) sur 1 million de backlinks HelloFresh (toutes versions confondues) notait un cluster de Trust Flow à 27, signe de liens site-wide potentiellement dupliqués. Il convient de surveiller les backlinks automatiques (scrapers, annuaires de mauvaise qualité).</p>
+
+<h3>3.3 Opportunités de netlinking</h3>
+
+<p><span class="verdict warn">⚠️ Axes d'amélioration identifiés</span></p>
+
+<p><strong>1. Link Baiting (contenu qui attire naturellement des liens) :</strong></p>
+<ul>
+  <li><strong>Infographies :</strong> Créer des infographies sur la nutrition, le gaspillage alimentaire, les habitudes culinaires des Français — contenu très partagé et cité.</li>
+  <li><strong>Études propriétaires :</strong> HelloFresh dispose de données uniques (recettes les plus populaires par région, tendances alimentaires). Publier une « Étude HelloFresh sur les goûts culinaires des Français » générerait des reprises presse.</li>
+  <li><strong>Outils gratuits :</strong> Un calculateur de budget courses vs HelloFresh, un planificateur de repas de la semaine — outils linkables.</li>
+</ul>
+
+<p><strong>2. Guest Blogging :</strong></p>
+<ul>
+  <li>Contribuer à des blogs culinaires reconnus (Marmiton, 750g, Cuisine Actuelle) avec des articles signés par les chefs HelloFresh.</li>
+  <li>Partenariats avec des blogs nutrition/santé (Yuka, Healthline FR) pour des articles sur l'alimentation équilibrée.</li>
+  <li>Articles invités sur des sites lifestyle (Madame Figaro, Elle à Table) pendant les temps forts (rentrée, fêtes).</li>
+</ul>
+
+<p><strong>3. Échanges et partenariats :</strong></p>
+<ul>
+  <li><strong>Programme d'affiliation existant :</strong> HelloFresh a déjà un programme affilié (<code>/about/affiliates</code>) — c'est un levier de backlinks naturels. Le programme pourrait être élargi aux micro-influenceurs (1K-10K abonnés) pour diversifier les sources.</li>
+  <li><strong>Partenariats sportifs :</strong> Étendre le partenariat FFBB à d'autres fédérations (athlétisme, rugby) pour des backlinks institutionnels.</li>
+  <li><strong>Partenariats RSE :</strong> Collaborations avec des associations anti-gaspillage (Too Good To Go, Emmaüs) — backlinks à fort Trust Flow + image de marque.</li>
+  <li><strong>Relations presse digitales :</strong> Communiqués réguliers aux rédactions food/tech/business pour maintenir la couverture médiatique et le flux de backlinks éditoriaux.</li>
+</ul>
+
+<hr class="separator">
+<div class="page-break"></div>
+
+<!-- ============================================================ -->
+<h2>PARTIE 4 — SYNTHÈSE ET RECOMMANDATIONS PRIORITAIRES</h2>
+<!-- ============================================================ -->
+
+<h3>4.1 Tableau récapitulatif</h3>
+
+<table>
+  <tr><th>Critère</th><th>Score</th><th>Priorité</th></tr>
+  <tr><td>Core Web Vitals</td><td class="warn">⚠️ Échec (INP, CLS, TTFB)</td><td>Haute</td></tr>
+  <tr><td>Optimisation images</td><td class="warn">⚠️ 38% trop lourdes</td><td>Moyenne</td></tr>
+  <tr><td>Mobile Responsive</td><td class="good">✅ Bon</td><td>—</td></tr>
+  <tr><td>HTTPS</td><td class="good">✅ Bon</td><td>—</td></tr>
+  <tr><td>Sitemap / robots.txt</td><td class="good">✅ Excellent (8 716 URLs)</td><td>—</td></tr>
+  <tr><td>Erreurs 404</td><td class="warn">⚠️ 4 erreurs</td><td>Basse</td></tr>
+  <tr><td>Title / Meta Description</td><td class="good">✅ Bien optimisés</td><td>—</td></tr>
+  <tr><td>Structure Headings</td><td class="bad">❌ 4×H1, hiérarchie cassée</td><td>Haute</td></tr>
+  <tr><td>Attributs Alt images</td><td class="bad">❌ 47,5% manquants</td><td>Haute</td></tr>
+  <tr><td>URLs / Slugs</td><td class="warn">⚠️ IDs techniques, majuscules</td><td>Moyenne</td></tr>
+  <tr><td>Contenu rédactionnel</td><td class="bad">❌ 108 pages &lt; 300 mots</td><td>Haute</td></tr>
+  <tr><td>Autorité / Backlinks</td><td class="good">✅ Profil solide (~1 820 domaines)</td><td>—</td></tr>
+  <tr><td>Opportunités netlinking</td><td class="warn">⚠️ Potentiel sous-exploité</td><td>Moyenne</td></tr>
+</table>
+
+<h3>4.2 Top 5 des actions prioritaires</h3>
+
+<ol>
+  <li><strong>Corriger la structure des headings :</strong> Un seul H1 par page, hiérarchie descendante stricte. Impact direct sur l'interprétation sémantique par Google. Effort : faible. Impact : élevé.</li>
+
+  <li><strong>Ajouter les attributs alt manquants :</strong> 47,5% des images sans alt = quasi la moitié du potentiel SEO image perdu + problème d'accessibilité. Automatisable via le CMS. Effort : moyen. Impact : élevé.</li>
+
+  <li><strong>Améliorer les Core Web Vitals (INP + CLS) :</strong> Réduire le JavaScript bloquant pour l'INP, ajouter des dimensions aux images et stabiliser les bannières dynamiques pour le CLS. Effort : élevé. Impact : élevé (facteur de ranking Google).</li>
+
+  <li><strong>Enrichir le contenu thin :</strong> Les 108 pages à moins de 300 mots doivent être enrichies ou consolidées. Créer une stratégie de contenu blog/magazine pour capter le trafic informationnel. Effort : élevé. Impact : moyen-élevé.</li>
+
+  <li><strong>Nettoyer les URLs :</strong> Supprimer les IDs techniques, forcer les minuscules, remplacer les underscores. Mettre en place des redirections 301 pour les anciennes URLs. Effort : moyen. Impact : moyen.</li>
+</ol>
+
+<h3>4.3 Conclusion</h3>
+
+<p>HelloFresh France bénéficie d'une <strong>base technique solide</strong> (HTTPS, sitemap, mobile responsive, CDN images) et d'un <strong>profil de backlinks enviable</strong> pour le marché français (presse nationale, partenariats sportifs, programme d'affiliation actif).</p>
+
+<p>Les principaux axes d'amélioration sont <strong>on-site</strong> : la structure sémantique (headings), l'accessibilité des images (attributs alt), la performance JavaScript (Core Web Vitals), et la stratégie de contenu (thin content, absence de blog structuré).</p>
+
+<p>En corrigeant ces points, HelloFresh France pourrait significativement améliorer son positionnement organique, notamment sur les requêtes informationnelles (recettes, nutrition, alimentation équilibrée) qui représentent un volume de recherche considérable en France.</p>
+
+<hr class="separator">
+
+<p style="color: #555; font-size: 9pt; margin-top: 30px;">
+  <em>Audit réalisé le 21 avril 2026 — Données collectées via Google PageSpeed Insights, SEMrush (données publiques), Ahrefs (données publiques), analyse manuelle du code source et des sitemaps. Les métriques Majestic (TF/CF) sont des estimations basées sur les données disponibles publiquement.</em>
+</p>
+
+</body>
+</html>
